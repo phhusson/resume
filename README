@@ -1,0 +1,3 @@
+
+apt install texlive-fonts-extra texlive-latex-extra1
+pdflatex resume.tex
