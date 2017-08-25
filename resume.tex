@@ -78,6 +78,7 @@
 				\item Automatic Android firmware tests
 				\item CTS/GTS integration
 				\item List and fixes of known usual problems
+				\item Continuous build of various Android apps
 			\end{itemize}
 		\item Support of various SoC vendors (TI, Rockchip, Qualcomm, Spreadtrum, Mediatek, ...)
 		\item Handled various software security issues
@@ -85,7 +86,12 @@
 				\item Early-detection of in-firmware PHAs
 				\item Remote disactivation of PHAs
 				\item Integration of monthly security bulletins
-				\item Binary security patches experiment
+				\item \href{https://github.com/archos-sa/security-binary}{Binary security patches experiment}
+			\end{itemize}
+		\item Contributions to Archos Video Player
+			\begin{itemize}
+				\item Audio passthrough support
+				\item Torrent streaming support
 			\end{itemize}
 	\end{itemize}}
 \cventry{2013}{Intern}{SeQureNet}{Paris}{}{PCBA conception (schematics, routing, FPGA programming)}
@@ -104,7 +110,29 @@
 		\item Basic use of vision detection
 	\end{itemize}
 }
-\cventry{2008--2010}{XDandroid}{}{}{}{
+	\cventry{2008--2010}{\href{https://forum.xda-developers.com/showthread.php?t=601751}{XDandroid}}{Android port to Windows CE-based phones}{}{}{}
+\cventry{2015--2017}{phh's SuperUser}{An SELinux-aware Android super-user}{}{}{
+	\begin{itemize}
+		\item Fork of existing \href{https://github.com/phhusson/Superuser}{SU app}
+		\item Creation of an \href{https://github.com/phhusson/sepolicy-inject}{SELinux policy edition tool}
+		\item Creation of a \href{https://github.com/phhusson/super-bootimg}{boot.img file format editor}
+	\end{itemize}
+}
+\cventry{2013--2014}{STpp}{\href{https://github.com/phhusson/STpp}{C++ framework for STM32F4 microcontrollers}}{}{}{}
+\cventry{2010--2011}{Toshiba AC100 opensource support}{ARM-based laptop}{}{}{
+	\begin{itemize}
+		\item NVEC reverse engineering and driver creation (driver mainlined since then)
+		\item Userspace audio codec driver
+	\end{itemize}
+}
+\cventry{}{}{Minor contributions}{}{}{
+	\begin{itemize}
+		\item Bug fixes in \href{https://github.com/iBotPeaches/Apktool}{Apktool}
+		\item Linux mainline support of \href{https://patchwork.kernel.org/patch/9413747/}{RC5T619 PMIC}
+		\item \href{https://github.com/rockchip-linux/rockchip_forwardports}{Rockchip ports (mali driver, vtl\_ts, build fixes, codec, ...)}
+		\item TWRP support for some Archos devices
+		\item \href{https://forum.xda-developers.com/android/software/wifi-dhcp-accelerator-t3023534}{DHCP on Android connection-time analysis}
+	\end{itemize}
 }
 
 \section{Languages}
