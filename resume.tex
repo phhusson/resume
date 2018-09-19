@@ -60,8 +60,21 @@
 \section{Education}
 \cventry{2010--2013}{Master Degree in Engineering}{Ing\'enieur Telecom ParisTech}{}{}{Major: Embedded systems}  % arguments 3 to 6 can be left empty
 
+\vspace*{-3mm}
 \section{Work experience}
-%\subsection{Salari\'e}
+\cventry{2018--}{Software engineer, kickstarting Android}{Softathome}{Colombes, Paris Area}{}{
+	\begin{itemize}
+        \item Android firmware/apps CI
+        \item Generic System Image PoC (8 SoCs vendors)
+        \item Android-stack tv player (ExoPlayer-based)
+            \begin{itemize}
+                \item Viaccess DRM integration
+                \item Improved SmoothStreaming support
+                \item DVB/multicast support (DVB-T, DVB-SI, ...)
+            \end{itemize}
+        \item Android metrics analysis
+	\end{itemize}
+}
 \cventry{2016--2017}{Lead software engineer}{Archos}{Igny, Paris Area}{}{
 	\begin{itemize}
 		\item Manage B2B customer technical relationship and development
@@ -74,29 +87,24 @@
 	\begin{itemize}
 %		\item Certification Android devices for Google services (CTS/GTS)
 		\item Creation of Android firmware-editing tools
-		\item Creation of Archos Fusion Storage
-		\item Development and operation Archos OTA system
+%		\item Creation of Archos Fusion Storage
+		\item Development and operation of Archos OTA system
 		\item Collection and analysis of device statistics (based on ES/Kibana)
-		\item Development of testing tools and CI
-			\begin{itemize}
-				\item Automatic Android firmware tests
-				\item CTS/GTS integration
+        \item Development of testing tools and CI (Android firmwares, CTS, GTS, apps, ...)
+%			\begin{itemize}
+%				\item Automatic Android firmware tests
+%				\item CTS/GTS integration
 %				\item List and fixes of known usual problems
-				\item Continuous build of various Android apps
-			\end{itemize}
+%				\item Continuous build of various Android apps
+%			\end{itemize}
 %		\item Support of various SoC vendors (TI, Rockchip, Qualcomm, Spreadtrum, Mediatek, ...)
-		\item Handled various software security issues
-			\begin{itemize}
-				\item Early-detection of in-firmware PHAs
-%				\item Remote disactivation of PHAs
-%				\item Integration of monthly security bulletins
-				\item \href{https://github.com/archos-sa/security-binary}{Binary security patches experiment}
-			\end{itemize}
-		\item Contributions to Archos Video Player
-			\begin{itemize}
-				\item Audio passthrough support
-				\item Torrent streaming support
-			\end{itemize}
+		\item Early-detection and removal of in-firmware PHAs
+		\item \href{https://github.com/archos-sa/security-binary}{Binary security patches experiment}
+%		\item Contributions to Archos Video Player
+%			\begin{itemize}
+%				\item Audio passthrough support
+%				\item Torrent streaming support
+%			\end{itemize}
 	\end{itemize}}
 \cventry{2013}{Intern}{SeQureNet}{Paris}{}{
 	\begin{itemize}
@@ -106,6 +114,7 @@
 	\end{itemize}
 }
 
+\vspace*{-3mm}
 \section{Voluntary experience}
 %\cventry{2013}{Author and maintainer}{quassel-irssi}{}{}{Creation of an IM module for irssi, to connect to a quassel core}
 \cventry{2010--2015}{Rezel voluntary association}{Telecom ParisTech student house}{}{}{
@@ -128,6 +137,13 @@
 		\item \href{Creation of a https://github.com/phhusson/super-bootimg}{boot.img file format editor}
 	\end{itemize}
 }
+\cventry{2017--2018}{\href{https://github.com/phhusson/treble_experimentations/wiki}{Phh-Treble}}{Android Generic System Image}{}{}{
+    \begin{itemize}
+        \item Maintaining support for Android 8.0/8.1 vendor
+        \item Vendor-specific workarounds in Android framework
+        \item Support for vendor-specific features
+    \end{itemize}
+}
 %\cventry{2013--2014}{STpp}{\href{https://github.com/phhusson/STpp}{C++ framework for STM32F4 microcontrollers}}{}{}{}
 \cventry{2010--2011}{Toshiba AC100 opensource support}{ARM-based laptop}{}{}{
 	\begin{itemize}
@@ -136,8 +152,10 @@
 	\end{itemize}
 }
 \cventry{}{Miscellaneous open-source contributions}{}{}{}{}
-\cvlistdoubleitem{\href{https://github.com/iBotPeaches/Apktool/commits?author=phhusson}{Bugfixes in Apktool}}{\href{https://github.com/lkl/linux/commits?author=phhusson}{Bugfixes in Linux Kernel Library}}
-\cvlistdoubleitem{\href{https://patchwork.kernel.org/patch/9413747/}{Linux support of RC5T619 PMIC}}{TWRP support for some Archos devices}
+
+
+%\cvlistdoubleitem{TWRP support for some Archos devices}{\href{https://github.com/lkl/linux/commits?author=phhusson}{Bugfixes in Linux Kernel Library}}
+\cvlistdoubleitem{\href{https://patchwork.kernel.org/patch/9413747/}{Linux support of RC5T619 PMIC}}{\href{https://github.com/iBotPeaches/Apktool/commits?author=phhusson}{Bugfixes in Apktool}}
 \cvlistitem{\href{https://github.com/rockchip-linux/rockchip_forwardports}{Rockchip ports (mali driver, vtl\_ts, build fixes, codec, ...)}}
 \cvlistitem{\href{https://forum.xda-developers.com/android/software/wifi-dhcp-accelerator-t3023534}{DHCP on Android connection-time analysis}}
 
