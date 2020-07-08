@@ -5,7 +5,7 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
@@ -19,7 +19,7 @@
 %\usepackage{hyperref}
 
 % adjust the page margins
-\usepackage[margin=1in,scale=0.75]{geometry}
+\usepackage[margin=0.75in,scale=1.0]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -31,7 +31,7 @@
 \email{phh@phh.me}                               % optional, remove / comment the line if not wanted
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[twitter]{phhusson}                             % optional, remove / comment the line if not wanted
 \social[github]{phhusson}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
@@ -53,58 +53,84 @@
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
-	\vspace*{-15mm}
+%	\vspace*{-15mm}
 \makecvtitle
-	\vspace*{-10mm}
+%	\vspace*{-10mm}
 
 \section{Education}
-\cventry{2010--2013}{Master Degree in Engineering}{Ing\'enieur Telecom ParisTech}{}{}{Major: Embedded systems}  % arguments 3 to 6 can be left empty
+\cventry{2010--2013}{Master Degree in Engineering}{Ing\'enieur Telecom ParisTech}{}{}{Major: Embedded systems}
 
 \vspace*{-3mm}
 \section{Work experience}
 \cventry{2018--}{Software engineer, kickstarting Android}{Softathome}{Colombes, Paris Area}{}{
 	\begin{itemize}
         \item Android firmware/apps CI
-        \item Generic System Image PoC (8 SoCs vendors)
+        \item Android TV Generic System Image PoC (8 SoCs vendors)
+            \begin{itemize}
+                \item 8 SoC vendors (STBs, tablets and smartphones for all-in-one demos)
+                \item Demo of Android 9 and Android 10, 2 weeks after their source code release
+            \end{itemize}
         \item Android-stack tv player (ExoPlayer-based)
             \begin{itemize}
+                \item Partial HbbTV support (\href{https://github.com/google/ExoPlayer/pull/6922}{upstream part})
+                \item \href{https://github.com/google/ExoPlayer/pull/7005}{Improved SmoothStreaming support}
                 \item Viaccess DRM integration
-                \item Improved SmoothStreaming support
-                \item DVB/multicast support (DVB-T, DVB-SI, ...)
+                \item DVB/multicast support (DVB-T, DVB-SI, CAS...)
+                \item Seamless ad-insertion prototype
+                \item Faster time-to-zap optimizations (down to 120ms on multicast IPTV, 200ms on OTT)
             \end{itemize}
         \item Android metrics analysis
+        \item Development-focused userspace bootloader based on kexec
+            \begin{itemize}
+                \item Automatically boots either latest revision or CI-controlled revision
+                \item Boot over network
+            \end{itemize}
+        \item CI for Softathome's Linux-based STB software solution
+            \begin{itemize}
+                \item Optimization of build time (2 hours => 13 minutes)
+                \item Integration of Gitlab and Jenkins into Softathome's build system
+                \item Automatic integration test run on STBs at every merge-request
+            \end{itemize}
+         \item Android platforms security analysis
+            \begin{itemize}
+                \item Reported Amlogic STB security flaw ranked High in Android security bulletin
+                \item Reported two Broadcom STB security flaws ranked High
+                \item Discussions with DRM/CAS provider to help them improve their security, and Android compatibility
+            \end{itemize}
+         \item Rust implementation of RTP multicast receiver, including FEC and FCC support
 	\end{itemize}
 }
 \cventry{2016--2017}{Lead software engineer}{Archos}{Igny, Paris Area}{}{
 	\begin{itemize}
 		\item Manage B2B customer technical relationship and development
-%		\item Drive and train engineer team in Archos Shenzhen
+		\item Drive and train engineer team in Archos Shenzhen
 		\item Manage a team of 4 engineers in France
 		\item Manage remotely a team of 4 in Shenzhen
+        \item Handle the release, including Google certification, of nearly one new model per week
 	\end{itemize}
 }
 \cventry{2014--2015}{Software engineer}{Archos}{Igny, Paris Area}{}{
 	\begin{itemize}
-%		\item Certification Android devices for Google services (CTS/GTS)
+		\item Certification Android devices for Google services (CTS/GTS)
 		\item Creation of Android firmware-editing tools
-%		\item Creation of Archos Fusion Storage
+		\item Creation of Archos Fusion Storage
 		\item Development and operation of Archos OTA system
 		\item Collection and analysis of device statistics (based on ES/Kibana)
         \item Development of testing tools and CI (Android firmwares, CTS, GTS, apps, ...)
-%			\begin{itemize}
-%				\item Automatic Android firmware tests
-%				\item CTS/GTS integration
-%				\item List and fixes of known usual problems
-%				\item Continuous build of various Android apps
-%			\end{itemize}
-%		\item Support of various SoC vendors (TI, Rockchip, Qualcomm, Spreadtrum, Mediatek, ...)
+			\begin{itemize}
+				\item Automatic Android firmware tests
+				\item CTS/GTS integration
+				\item List and fixes of known usual problems
+				\item Continuous build of various Android apps
+			\end{itemize}
+		\item Support of various SoC vendors (TI, Rockchip, Qualcomm, Unisoc, MTK, ...)
 		\item Early-detection and removal of in-firmware PHAs
 		\item \href{https://github.com/archos-sa/security-binary}{Binary security patches experiment}
-%		\item Contributions to Archos Video Player
-%			\begin{itemize}
-%				\item Audio passthrough support
-%				\item Torrent streaming support
-%			\end{itemize}
+		\item Contributions to Archos Video Player
+			\begin{itemize}
+				\item Audio passthrough support
+				\item Torrent streaming support
+			\end{itemize}
 	\end{itemize}}
 \cventry{2013}{Intern}{SeQureNet}{Paris}{}{
 	\begin{itemize}
@@ -114,14 +140,33 @@
 	\end{itemize}
 }
 
-\vspace*{-3mm}
+%\vspace*{-3mm}
 \section{Voluntary experience}
-%\cventry{2013}{Author and maintainer}{quassel-irssi}{}{}{Creation of an IM module for irssi, to connect to a quassel core}
 \cventry{2010--2015}{Rezel voluntary association}{Telecom ParisTech student house}{}{}{
 	President of the association
 	\newline{}
 	Managing and maintaining the local network (circa. 500 subscribers)
 }
+\cventry{2017--}{\href{https://github.com/phhusson/treble_experimentations/wiki}{Phh-Treble}}{Android Generic System Image}{}{}{
+    \begin{itemize}
+        \item Maintaining support for devices originally running Android 8.0/8.1/9.0/10.0
+        \item Vendor-specific workarounds in Android framework
+        \item Support for vendor-specific features
+        \item OTA mechanism based on Android 10's dynamic partitions
+        \item Used as technical basis for 10+ other custom GSIs, including Ubuntu Touch
+        \item On-going discussions with Google to discuss future of Project Treble
+        \item Contributions reused across the whole custom ROM community, including LineageOS
+    \end{itemize}
+}
+\cventry{2018--}{\href{https://github.com/nova-video-player/aos-AVP}{Nova Video Player}}{full-featured Android Video Player, including library}{}{}{
+    \begin{itemize}
+        \item CI
+        \item FDroid integration
+        \item Torrent support maintainance
+        \item SFTP stability
+    \end{itemize}
+}
+%\cventry{2013}{Author and maintainer}{quassel-irssi}{}{}{Creation of an IM module for irssi, to connect to a quassel core}
 %\cventry{2010--2013}{Telecom robotics}{Telecom ParisTech student robotics association}{}{}{
 %	\begin{itemize}
 %		\item Creation of a C++11 framework for STM32F4 micro-controller
@@ -130,20 +175,13 @@
 %	\end{itemize}
 %}
 \cventry{2008--2010}{\href{https://forum.xda-developers.com/showthread.php?t=601751}{XDandroid}}{Android port to Windows CE-based phones}{}{}{}
-\cventry{2015--2017}{\href{https://forum.xda-developers.com/android/software-hacking/wip-selinux-capable-superuser-t3216394}{phh's SuperUser}}{An SELinux-aware Android super-user}{}{}{
-	\begin{itemize}
-		\item \href{Fork of existing https://github.com/phhusson/Superuser}{SU app}
-		\item \href{Creation of an https://github.com/phhusson/sepolicy-inject}{SELinux policy edition tool}
-		\item \href{Creation of a https://github.com/phhusson/super-bootimg}{boot.img file format editor}
-	\end{itemize}
-}
-\cventry{2017--2018}{\href{https://github.com/phhusson/treble_experimentations/wiki}{Phh-Treble}}{Android Generic System Image}{}{}{
-    \begin{itemize}
-        \item Maintaining support for Android 8.0/8.1 vendor
-        \item Vendor-specific workarounds in Android framework
-        \item Support for vendor-specific features
-    \end{itemize}
-}
+\cventry{2015--2017}{\href{https://forum.xda-developers.com/android/software-hacking/wip-selinux-capable-superuser-t3216394}{phh's SuperUser}}{An SELinux-aware Android super-user}{}{}{}
+%	\begin{itemize}
+%		\item \href{Fork of existing https://github.com/phhusson/Superuser}{SU app}
+%		\item \href{Creation of an https://github.com/phhusson/sepolicy-inject}{SELinux policy edition tool}
+%		\item \href{Creation of a https://github.com/phhusson/super-bootimg}{boot.img file format editor}
+%	\end{itemize}
+%}
 %\cventry{2013--2014}{STpp}{\href{https://github.com/phhusson/STpp}{C++ framework for STM32F4 microcontrollers}}{}{}{}
 \cventry{2010--2011}{Toshiba AC100 opensource support}{ARM-based laptop}{}{}{
 	\begin{itemize}
